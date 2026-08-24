@@ -27,8 +27,9 @@ scutil --dns
 curl -fsS https://test.nextdns.io
 ```
 
-`unconfigured` は未設定を示す観測結果であり、設定変更は行いません。導入・検証・
-ルーター展開の順序は [docs/current-state.md](docs/current-state.md) を正本にします。
+`scutil --dns` はローカルread、`curl` はNextDNSへの外部HTTPS readです。どちらも設定変更は
+行わず、結果をissue・README・commitへ貼り付けません。`unconfigured` は未設定を示す観測結果です。
+導入・検証・ルーター展開の順序は [docs/current-state.md](docs/current-state.md) を正本にします。
 
 ## セキュリティ
 
