@@ -18,6 +18,19 @@ NextDNSを使って、自宅ネットワークと端末のDNS広告・トラッ�
 
 詳細は [docs/current-state.md](docs/current-state.md) を参照してください。
 
+## 最小確認
+
+NextDNSアカウントへログインせず、現在のmacOS resolverと適用状態だけを確認できます。
+
+```bash
+scutil --dns
+curl -fsS https://test.nextdns.io
+```
+
+`scutil --dns` はローカルread、`curl` はNextDNSへの外部HTTPS readです。どちらも設定変更は
+行わず、結果をissue・README・commitへ貼り付けません。`unconfigured` は未設定を示す観測結果です。
+導入・検証・ルーター展開の順序は [docs/current-state.md](docs/current-state.md) を正本にします。
+
 ## セキュリティ
 
 NextDNS Configuration ID、APIキー、認証情報、実IPアドレス、端末識別情報はコミットしません。
